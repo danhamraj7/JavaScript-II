@@ -4,6 +4,17 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+//myName is on the Global scope
+let MyName = 'Dan';
+
+function greetMe() {
+  //Within the curly brackets is the Local scope
+  console.log(`Hello, ${myName} nice to meet you`)
+}
+
+greetMe();
+
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
