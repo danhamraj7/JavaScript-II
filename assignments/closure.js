@@ -5,16 +5,36 @@
 // The outer scope can be a parent function, or the top level of the script.
 
 
+// This is on the global scope.
+
+let b = "can I access this";
+
+
+/*Inside the function "bb" is on the local scope which means that function
+ "bb" would have access to variable "b" but "b" does not have access to "c" 
+ since "c" is in the local scope. function bb has to be invoked to get the
+  value of "c".
+ */
+function bb() {
+  return c = b;
+}
+
+console.log(bb())
+
+
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 
 // ==== Challenge 2: Implement a "counter maker" function ====
 const counterMaker = () => {
   // IMPLEMENTATION OF counterMaker:
-  // 1- Declare a `count` variable with a value of 0. We will be mutating it, so declare it using `let`!
-  // 2- Declare a function `counter`. It should increment and return `count`.
+  // 1- Declare a `count` variable with a value of 0. We will be mutating it,
+  // so declare it using `let`!
+  // 2- Declare a function `counter`. It should increment and return
+  //`count`.
   //      NOTE: This `counter` function, being nested inside `counterMaker`,
-  //      "closes over" the `count` variable. It can "see" it in the parent scope!
+  //      "closes over" the `count` variable. It can "see" it in the 
+  //      parent scope!
   // 3- Return the `counter` function.
 };
 // Example usage: const myCounter = counterMaker();
